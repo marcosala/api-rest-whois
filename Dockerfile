@@ -10,6 +10,9 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-configure intl \
     && docker-php-ext-install intl pdo pdo_mysql zip
 
+# Installa Composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
 # Abilita il modulo Rewrite di Apache
 RUN a2enmod rewrite
 
@@ -20,7 +23,7 @@ WORKDIR /var/www/html
 COPY . .
 
 # Assegna i permessi alla cartella di log e tmp
-RUN chown -R www-data:www-data /var/www/html/tmp /var/www/html/logs
+#RUN chown -R www-data:www-data /var/www/html/tmp /var/www/html/logs
 
 # Espone la porta 80
 EXPOSE 80
