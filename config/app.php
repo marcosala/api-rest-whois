@@ -175,6 +175,7 @@ return [
         'log' => true,
         'trace' => true,
         'ignoredDeprecationPaths' => [],
+        'exceptionRenderer' => \App\Error\JsonExceptionRenderer::class,
     ],
 
     /*

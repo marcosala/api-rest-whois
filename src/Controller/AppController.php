@@ -49,4 +49,22 @@ class AppController extends Controller
          */
         //$this->loadComponent('FormProtection');
     }
+
+    public function beforeFilter(\Cake\Event\EventInterface $event)
+    {
+        parent::beforeFilter($event);
+
+        // Esegui la gestione degli errori personalizzata
+        $this->getEventManager()->on('Controller.beforeRender', function ($event) {
+            $response = $this->response;
+            if ($this->response->getStatusCode() >= 400) {
+                $this->set([
+                    'error' => true,
+                    'message' => $this->response->getStringBody(),
+                    'status' => $this->response->getStatusCode(),
+                ]);
+                $this->viewBuilder()->setClassName('Json');
+            }
+        });
+    }
 }
