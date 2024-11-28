@@ -22,9 +22,6 @@ WORKDIR /var/www/html
 # Copia i file del progetto nel container
 COPY . .
 
-# Assegna i permessi alla cartella di log e tmp
-#RUN chown -R www-data:www-data /var/www/html/tmp /var/www/html/logs
-
 # Espone la porta 80
 EXPOSE 80
 
