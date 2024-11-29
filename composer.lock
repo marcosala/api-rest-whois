@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a070f9fb8758c54ded06acaf351224f6",
+    "content-hash": "6aac11163a8c8cc17c3bc7c8086af71e",
     "packages": [
         {
             "name": "cakephp/cakephp",
@@ -369,6 +369,68 @@
                 }
             ],
             "time": "2024-11-27T15:35:25+00:00"
+        },
+        {
+            "name": "io-developer/php-whois",
+            "version": "4.1.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/io-developer/php-whois.git",
+                "reference": "ea4cf52832fe8ff56fc4937138467819aa2829c1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/io-developer/php-whois/zipball/ea4cf52832fe8ff56fc4937138467819aa2829c1",
+                "reference": "ea4cf52832fe8ff56fc4937138467819aa2829c1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=7.2",
+                "symfony/polyfill-intl-idn": "^1.27"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Iodev\\": "src/Iodev/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergey Sedyshev",
+                    "email": "i.o.developer@gmail.com",
+                    "homepage": "https://github.com/io-developer"
+                }
+            ],
+            "description": "PHP WHOIS provides parsed and raw whois lookup of domains and ASN routes. PHP 5.4+ and 7+ compatible ",
+            "homepage": "https://github.com/io-developer/php-whois",
+            "keywords": [
+                "asn",
+                "domain",
+                "info",
+                "lookup",
+                "parser",
+                "php",
+                "query",
+                "routes",
+                "tld",
+                "whois",
+                "црщшы"
+            ],
+            "support": {
+                "issues": "https://github.com/io-developer/php-whois/issues",
+                "source": "https://github.com/io-developer/php-whois/tree/4.1.10"
+            },
+            "time": "2023-01-25T14:42:45+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
@@ -1674,6 +1736,89 @@
             ],
             "support": {
                 "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.31.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-09-09T11:45:10+00:00"
+        },
+        {
+            "name": "symfony/polyfill-intl-idn",
+            "version": "v1.31.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-intl-idn.git",
+                "reference": "c36586dcf89a12315939e00ec9b4474adcb1d773"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/c36586dcf89a12315939e00ec9b4474adcb1d773",
+                "reference": "c36586dcf89a12315939e00ec9b4474adcb1d773",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2",
+                "symfony/polyfill-intl-normalizer": "^1.10"
+            },
+            "suggest": {
+                "ext-intl": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Laurent Bassin",
+                    "email": "laurent@bassin.info"
+                },
+                {
+                    "name": "Trevor Rowbotham",
+                    "email": "trevor.rowbotham@pm.me"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for intl's idn_to_ascii and idn_to_utf8 functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "idn",
+                "intl",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.31.0"
             },
             "funding": [
                 {
@@ -5834,12 +5979,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": ">=8.1"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }

@@ -28,8 +28,7 @@ class JsonExceptionRenderer implements ExceptionRendererInterface
         $data = [
             'error' => true,
             'message' => $this->exception->getMessage(),
-            'code' => $statusCode,
-            'trace' => env('DEBUG') ? $this->exception->getTrace() : [],
+            'code' => $statusCode
         ];
 
         // Crea una risposta HTTP con il JSON
@@ -46,7 +45,6 @@ class JsonExceptionRenderer implements ExceptionRendererInterface
     public function write(ResponseInterface|string $output): void
     {
         if ($output instanceof ResponseInterface) {
-            // Gestione di un oggetto ResponseInterface
             foreach ($output->getHeaders() as $header => $values) {
                 foreach ($values as $value) {
                     header(sprintf('%s: %s', $header, $value), false);
@@ -54,8 +52,7 @@ class JsonExceptionRenderer implements ExceptionRendererInterface
             }
             http_response_code($output->getStatusCode());
             echo $output->getBody();
-        } elseif (is_string($output)) {
-            // Gestione di una semplice stringa
+        } elseif (is_string($output)) {   
             echo $output;
         }
     }
