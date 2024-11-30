@@ -1,9 +1,10 @@
-version: '3.8'
 services:
   app:
     build:
       context: .
       dockerfile: Dockerfile
-    image: app:latest
+    image: marcosala/api-rest-whois:latest
     ports:
       - "8080:80"
+    volumes:
+      - .:/var/www/html
